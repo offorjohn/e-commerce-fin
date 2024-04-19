@@ -1,23 +1,71 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { useRef, useState } from "react";
+import Navbar from "./components/navbar";
+import { appRoutes } from "./routes";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { SwitchTransition, CSSTransition } from "react-transition-group";
+import { Suspense } from "react";
 function App() {
+  const cartIinitialState = {
+    totalAmount: 0,
+    numberOfItems: 0,
+    cartItems: [],
+  };
+  const categoryRef = useRef(null);
+  const [cartItems, setCartItems] = useState(cartIinitialState);
+  const [user, setUser] = useState({});
+  const [isLogged, setIsLogged] = useState(false);
+  const location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <Navbar
+        categoryRef={categoryRef}
+        cartItemsCount={cartItems.numberOfItems}
+        isLogged={isLogged}
+      />
+      <SwitchTransition component={null}>
+        <CSSTransition
+          key={location.pathname}
+          classNames="fade"
+          timeout={300}
+          unmountOnExit
         >
-          Learn React
-        </a>
-      </header>
+          <Suspense fallback={() => <h1>Loading..</h1>}>
+            <Routes location={location}>
+              {appRoutes.map((route) => {
+                if (route.requiresAuth && !isLogged) {
+                  return (
+                    <Route
+                      key={route.path}
+                      exact
+                      path={route.path}
+                      element={<Navigate replace to={"/login"} />}
+                    />
+                  );
+                } else {
+                  return (
+                    <Route
+                      key={route.path}
+                      exact
+                      path={route.path}
+                      element={
+                        <route.component
+                          categoryRef={categoryRef}
+                          _cartItems={cartItems}
+                          setCartItems={setCartItems}
+                          setUser={setUser}
+                          setIsLogged={setIsLogged}
+                          user={user}
+                        />
+                      }
+                    />
+                  );
+                }
+              })}
+            </Routes>
+          </Suspense>
+        </CSSTransition>
+      </SwitchTransition>
     </div>
   );
 }
