@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/e-commerce-fin/static/css/main.b1d2a353.css",
+    "main.js": "/e-commerce-fin/static/js/main.ccf6ecd2.js",
+    "static/js/404.8f975ba2.chunk.js": "/e-commerce-fin/static/js/404.8f975ba2.chunk.js",
+    "static/js/137.b92e4bfa.chunk.js": "/e-commerce-fin/static/js/137.b92e4bfa.chunk.js",
+    "static/js/440.5ef03411.chunk.js": "/e-commerce-fin/static/js/440.5ef03411.chunk.js",
+    "static/js/38.807a8a45.chunk.js": "/e-commerce-fin/static/js/38.807a8a45.chunk.js",
+    "static/js/175.6ff4c825.chunk.js": "/e-commerce-fin/static/js/175.6ff4c825.chunk.js",
+    "static/js/787.60ae9cf4.chunk.js": "/e-commerce-fin/static/js/787.60ae9cf4.chunk.js",
+    "static/js/384.4c4db02c.chunk.js": "/e-commerce-fin/static/js/384.4c4db02c.chunk.js",
+    "static/media/bg-img.png": "/e-commerce-fin/static/media/bg-img.bf5597992474580c6c42.png",
+    "static/media/men-clothe.png": "/e-commerce-fin/static/media/men-clothe.ca033a5326dffe3acabd.png",
+    "static/media/women-clothe.png": "/e-commerce-fin/static/media/women-clothe.92fa40f63453091412db.png",
+    "index.html": "/e-commerce-fin/index.html",
+    "main.b1d2a353.css.map": "/e-commerce-fin/static/css/main.b1d2a353.css.map",
+    "main.ccf6ecd2.js.map": "/e-commerce-fin/static/js/main.ccf6ecd2.js.map",
+    "404.8f975ba2.chunk.js.map": "/e-commerce-fin/static/js/404.8f975ba2.chunk.js.map",
+    "137.b92e4bfa.chunk.js.map": "/e-commerce-fin/static/js/137.b92e4bfa.chunk.js.map",
+    "440.5ef03411.chunk.js.map": "/e-commerce-fin/static/js/440.5ef03411.chunk.js.map",
+    "38.807a8a45.chunk.js.map": "/e-commerce-fin/static/js/38.807a8a45.chunk.js.map",
+    "175.6ff4c825.chunk.js.map": "/e-commerce-fin/static/js/175.6ff4c825.chunk.js.map",
+    "787.60ae9cf4.chunk.js.map": "/e-commerce-fin/static/js/787.60ae9cf4.chunk.js.map",
+    "384.4c4db02c.chunk.js.map": "/e-commerce-fin/static/js/384.4c4db02c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1d2a353.css",
+    "static/js/main.ccf6ecd2.js"
+  ]
+}
